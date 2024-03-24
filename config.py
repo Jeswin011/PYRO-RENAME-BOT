@@ -38,8 +38,7 @@ class Config(object):
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://graph.org/file/e7bb2135ec7b2ab47b44e.jpg")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "renamebot01") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL","None"))
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "renamebot01")
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
