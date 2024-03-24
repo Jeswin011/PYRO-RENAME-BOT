@@ -26,19 +26,19 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID    = os.environ.get("API_ID", "7187263378")
+    API_HASH  = os.environ.get("API_HASH", "304a2fac558578f736a7a1c2ad7668aa")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7187263378:AAEFN1c__BSTeTbmoRKVKkl3QbRv7JIGiSE") 
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","pyro-botz")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_NAME = os.environ.get("DB_NAME","renamebot")     
+    DB_URL  = os.environ.get("DB_URL","mongodb://atlas-sql-66004b7a49694968e770a5d2-y4rfz.a.query.mongodb.net/myVirtualDatabase?ssl=true&authSource=admin")
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "")
+    START_PIC   = os.environ.get("START_PIC", "https://graph.org/file/e7bb2135ec7b2ab47b44e.jpg")
     ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "renamebot01") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", None))
 
     # wes response configuration     
